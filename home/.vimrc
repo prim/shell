@@ -69,7 +69,7 @@ syntax on
 set background=dark
 let g:solarized_bold=0
 
-colorscheme solarized
+colorscheme desert
 
 set hlsearch
 set incsearch
@@ -117,6 +117,27 @@ set foldlevelstart=0
 " screwing up folding when switching between windows.
 " autocmd InsertEnter * if !exists('w:last_fdm') | let w:last_fdm=&foldmethod | setlocal foldmethod=manual | endif
 " autocmd InsertLeave,WinLeave * if exists('w:last_fdm') | let &l:foldmethod=w:last_fdm | unlet w:last_fdm | endif
+
+set undofile
+set undolevels=1000         " How many undos
+set undoreload=10000        " number of lines to save for undo
+
+set backup                        " enable backups
+set swapfile                      " enable swaps
+set undodir=$HOME/.vim/tmp/undo     " undo files
+set backupdir=$HOME/.vim/tmp/backup " backups
+set directory=$HOME/.vim/tmp/swap   " swap files
+
+" Make those folders automatically if they don't already exist.
+if !isdirectory(expand(&undodir))
+    call mkdir(expand(&undodir), "p")
+endif
+if !isdirectory(expand(&backupdir))
+    call mkdir(expand(&backupdir), "p")
+endif
+if !isdirectory(expand(&directory))
+    call mkdir(expand(&directory), "p")
+endif
 
 " }}}
 

@@ -15,3 +15,5 @@ cp ./home/.vim/colors/*.vim ~/.vim/colors
 
 mkdir ~/.vim/autoload
 cp ./home/.vim/autoload/*.vim ~/.vim/autoload
+
+vim +PlugInstall +qall

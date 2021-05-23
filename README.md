@@ -14,7 +14,13 @@ perl ~/.local/bin/256.prl
 
 ## vim
 
+```bash
+./build-vim.sh
+```
 
+## bash 
+
+bash 的主要配置转移到 `home/.local/etc/common.sh`
 
 ## 历史残留
 

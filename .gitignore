@@ -1,0 +1,7 @@
+*.un*
+*.sw*
+
+build-tmux
+build-fzf
+build-vim
+build-bash

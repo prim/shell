@@ -15,3 +15,11 @@ perl ~/.local/bin/256.prl
 ## vim
 
 
+
+## 历史残留
+
+prim/bash 
+- DONE bashrc fzf
+- TODO git / zsh
+
+prim/env

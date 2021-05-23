@@ -37,7 +37,7 @@ if [[ -z "$TMUX" ]]; then
         tmux -2 -u attach -t $USER
     fi
 else
-    [ -f ~/.shell-debug ] && echo "in tmux"
+    [ -f ~/.shell-debug ] && echo "loading .bashrc: in tmux"
 fi
 
 # 判断 ~/.local/etc/common.sh 存在的话，就 source 它一下
@@ -81,7 +81,6 @@ if [ -n "$BASH_VERSION" ] || [ -n "$ZSH_VERSION" ]; then
         fi
     fi
 fi
-
 
 # 如果是登陆模式，那么 source 一下 ~/.local/etc/login.sh
 if [ -n "$BASH_VERSION" ]; then

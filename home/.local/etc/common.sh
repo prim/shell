@@ -1,4 +1,4 @@
-[ -f ~/.bash_test ] && echo ".local/etc/common.sh ing"
+[ -f ~/.shell-debug ] && echo "loading .local/etc/common.sh"
 
 ##############################################################################
 ### default
@@ -145,7 +145,7 @@ shopt -s cmdhist
 
 
 ##############################################################################
-### cd
+### z.lua
 
 # z.lua https://zhuanlan.zhihu.com/p/50548459
 eval "$(lua $HOME/.local/bin/z.lua  --init bash once enhanced)"
@@ -163,6 +163,3 @@ fi
 if [ -x "$(command -v helm)" ]; then
     source <(helm completion bash)
 fi
-
-
-

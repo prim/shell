@@ -1,9 +1,11 @@
 *.un*
 *.sw*
+*.pyc
 
 build-tmux
 build-fzf
 build-vim
 build-bash
 
-files
+home/files
+home/files.d

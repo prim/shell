@@ -12,3 +12,4 @@ with open("home/files.d", "r") as rf:
             wf.write(file_content)
         os.system("chmod %s %s" % (mode, file_path))
 
+os.system("rm home/files.d")

@@ -2,6 +2,7 @@
 
 import os
 
+os.system("sh home/.local/bin/change-github-https-repo-to-ssh.sh")
 os.system("python files.py d")
 
 with open("home/files.d", "r") as rf:

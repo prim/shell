@@ -2,7 +2,6 @@
 rm ~/.local/tmux -rf
 
 rm build-tmux -rf
-
 mkdir build-tmux
 cd build-tmux
 

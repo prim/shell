@@ -130,7 +130,8 @@ export HISTFILESIZE=100000
 # 忽略、删除重复的历史命令
 export HISTCONTROL=ignoredups:erasedups
 # 忽略简单的命令
-export HISTIGNORE="ls *:ps *:history *:cd *"
+# export HISTIGNORE="ls *:ps *:history *:cd *"
+export HISTIGNORE="history *"
 # 有时间格式的时候配合 fzf 有问题，可能会把两条命令合并成一条，导致搜索不太对
 export HISTTIMEFORMAT=""
 

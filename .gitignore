@@ -5,3 +5,5 @@ build-tmux
 build-fzf
 build-vim
 build-bash
+
+files

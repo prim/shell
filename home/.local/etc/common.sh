@@ -116,7 +116,7 @@ fi
 ##############################################################################
 ### PATH
 
-export PATH="$HOME/.local/nvim:$HOME/.local/tmux:$HOME/.pyenv/bin:$PATH"
+export PATH="$HOME/.local/go/bin:$HOME/.local/nvim:$HOME/.local/tmux:$HOME/.pyenv/bin:$PATH"
 
 ##############################################################################
 ### 历史

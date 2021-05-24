@@ -85,7 +85,7 @@ alias gs='git status'
 alias gp='git pull --rebase'
 alias gps='git push'
 
-alias v='vim'
+alias v='nvim'
 
 ##############################################################################
 ### nvm
@@ -116,7 +116,7 @@ fi
 ##############################################################################
 ### PATH
 
-export PATH="$HOME/.local/tmux:$HOME/.pyenv/bin:$PATH"
+export PATH="$HOME/.local/nvim:$HOME/.local/tmux:$HOME/.pyenv/bin:$PATH"
 
 ##############################################################################
 ### 历史

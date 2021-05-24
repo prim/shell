@@ -12,14 +12,14 @@
 
 hcjn0770 或 prim
 
-## 安装 tmux
+## 过程
 
-# bashrc
+```
+./build-git.py
 
-# fzf
-
-# vimrc
-
-# vim
-
-
+./build-tmux.sh
+# fzf 需要 bash 前面
+./build-fzf.sh 
+./build-bash.sh
+./build-neovim.sh
+```

@@ -24,6 +24,9 @@ cp ./nvim/AppRun ./nvim/nvim
 mkdir ~/.local
 cp -r ./nvim ~/.local
 
+pip install pynvim --user
+
 ~/.local/nvim/nvim +PlugInstall +qall
 ~/.local/nvim/nvim +PlugUpdate +qall
 ~/.local/nvim/nvim +UpdateRemotePlugins +qall
+

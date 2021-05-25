@@ -180,20 +180,20 @@ if has("gui_running")
     nnoremap <M-h> <C-W><
     nnoremap <M-l> <C-W>>
 else
-    nnoremap 1 1gt
-    nnoremap 2 2gt
-    nnoremap 3 3gt
-    nnoremap 4 4gt
-    
-    inoremap 1 <Esc>1gt
-    inoremap 2 <Esc>2gt
-    inoremap 3 <Esc>3gt
-    inoremap 4 <Esc>4gt
+    nnoremap <A-1> 1gt
+    nnoremap <A-2> 2gt
+    nnoremap <A-3> 3gt
+    nnoremap <A-4> 4gt
 
-    nnoremap k <C-W>-
-    nnoremap j <C-W>+
-    nnoremap h <C-W><
-    nnoremap l <C-W>>
+    inoremap <A-1> <Esc>1gt
+    inoremap <A-2> <Esc>2gt
+    inoremap <A-3> <Esc>3gt
+    inoremap <A-4> <Esc>4gt
+
+    nnoremap <A-k> <C-W>-
+    nnoremap <A-j> <C-W>+
+    nnoremap <A-h> <C-W><
+    nnoremap <A-l> <C-W>>
 endif
 
 " }}}
@@ -264,4 +264,11 @@ let g:vim_markdown_folding_style_pythonic = 1
 " Custom Setup {{{
 let g:pino_server_ip = "127.0.0.1"
 let g:pino_server_port = 10240""
+
+" call asyncomplete#register_source({
+"     \ 'name':'pino',
+"     \ 'whitelist': ['*'],
+"     \ 'completor': function('pino#completor'),
+"     \ })
+
 " }}}

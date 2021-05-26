@@ -26,20 +26,6 @@ if [ -d "$HOME/.local/bin" ]; then
     export PATH="$HOME/.local/bin:$PATH"
 fi
 
-# 尝试跳转到 tmux
-if [[ -z "$TMUX" ]]; then
-    if [ $USER == "hcjn0770" ]; then
-        # -2 Force tmux to assume the terminal supports 256 colours.
-        # -u tmux attempts to guess if the terminal is likely to support UTF-8 by checking the first of
-        #    the LC_ALL, LC_CTYPE and LANG environment variables to be set for the string "UTF-8".
-        #    This  is not always correct: the -u flag explicitly informs tmux that UTF-8 is supported.
-        tmux -2 -u new-session -s $USER
-        tmux -2 -u attach -t $USER
-    fi
-else
-    [ -f ~/.shell-debug ] && echo "loading .bashrc: in tmux"
-fi
-
 # 判断 ~/.local/etc/common.sh 存在的话，就 source 它一下
 if [ -f "$HOME/.local/etc/common.sh" ]; then
     . "$HOME/.local/etc/common.sh"
@@ -97,4 +83,17 @@ elif [ -n "$ZSH_VERSION" ]; then
     fi
 fi
 
+# 尝试跳转到 tmux
+if [[ -z "$TMUX" ]]; then
+    if [ $USER == "hcjn0770" ]; then
+        # -2 Force tmux to assume the terminal supports 256 colours.
+        # -u tmux attempts to guess if the terminal is likely to support UTF-8 by checking the first of
+        #    the LC_ALL, LC_CTYPE and LANG environment variables to be set for the string "UTF-8".
+        #    This  is not always correct: the -u flag explicitly informs tmux that UTF-8 is supported.
+        tmux -2 -u new-session -s $USER
+        tmux -2 -u attach -t $USER
+    fi
+else
+    [ -f ~/.shell-debug ] && echo "loading .bashrc: in tmux"
+fi
 

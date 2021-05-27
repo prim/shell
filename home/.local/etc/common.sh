@@ -86,6 +86,7 @@ alias gp='git pull --rebase'
 alias gps='git push'
 
 alias v='nvim'
+alias vim='nvim'
 
 ##############################################################################
 ### nvm
@@ -140,7 +141,11 @@ export HISTTIMEFORMAT=""
 export PROMPT_COMMAND="history -a; history -n; $PROMPT_COMMAND"
 
 # 避免 .bash_history 被覆盖
-shopt -s histappend
+# NOTE 这个选项会导致 tmux 中不同 panel 的命令串了
+# 在 A panel 输入命令 快速到 B panel按向上方向键盘
+# shopt -s histappend
+
+# 20210526 注释这个 看看能不能解决串命令的问题
 # 将多行命令保存为单条记录
 shopt -s cmdhist
 

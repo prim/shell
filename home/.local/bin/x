@@ -1,0 +1,20 @@
+#!/usr/bin/env python
+
+import sys
+import tempfile
+import subprocess
+
+
+with tempfile.NamedTemporaryFile(suffix=".tmp") as tfile:
+    path = tfile.name
+
+    if not sys.stdin.isatty():
+        text = sys.stdin.read()
+        tfile.write(text)
+        tfile.flush()
+
+    with open("/dev/tty") as tty:
+        subprocess.call(["vim", path], stdin=tty)
+
+    subprocess.call(["bash", path])
+

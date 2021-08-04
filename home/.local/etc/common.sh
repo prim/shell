@@ -88,6 +88,8 @@ alias gps='git push'
 alias v='nvim'
 alias vim='nvim'
 
+alias ag='rg'
+
 ##############################################################################
 ### nvm
 

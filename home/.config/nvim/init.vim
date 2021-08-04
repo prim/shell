@@ -13,13 +13,20 @@ augroup END
 " vim-plug {{{
 call plug#begin('~/.vim/plugged')
 
+" Plug 'roxma/vim-tmux-clipboard'
 Plug 'vim-scripts/The-NERD-tree'
 Plug 'vim-scripts/pyflakes.vim'
-Plug 'prabirshrestha/async.vim'
-Plug 'prabirshrestha/asyncomplete.vim'
-Plug 'prim/pino.neovim'
 Plug 'prim/foldtax.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
+if has('win32')
+    Plug 'prabirshrestha/async.vim'
+    Plug 'prabirshrestha/asyncomplete.vim'
+    Plug 'prim/pino.neovim'
+else
+    Plug 'mileszs/ack.vim'
+endif
 
 call plug#end()
 " }}}
@@ -225,6 +232,16 @@ let g:NERDTreeWinSize=30
 let g:NERDTreeShowBookmarks=1
 
 nnoremap <F1> <Esc>:NERDTreeToggle<CR>
+" }}}
+"
+" grep {{{
+if has('win32')
+else
+    let g:ackprg = 'rg --vimgrep'
+    nnoremap <leader>gg :execute 'Ack '.expand('<cword>')<cr>
+    nnoremap <leader>gd :execute 'Ack '.expand('<cword>')<cr>
+    nnoremap <leader>gc :execute 'Ack '.expand('<cword>')<cr>
+endif
 " }}}
 
 " CtrlP {{{

@@ -88,14 +88,11 @@ alias gps='git push'
 alias v='nvim'
 alias vim='nvim'
 
-alias ag='rg'
-
 ##############################################################################
 ### nvm
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 ##############################################################################
 ### fzf
@@ -162,12 +159,6 @@ eval "$(lua $HOME/.local/bin/z.lua  --init bash once enhanced)"
 ##############################################################################
 ### kubectl & helm
 
-if [ -x "$(command -v kubectl)" ]; then
-    source <(kubectl completion bash)
-    alias k=kubectl
-    complete -F __start_kubectl k
-fi
+alias k=kubectl
+complete -F __start_kubectl k
 
-if [ -x "$(command -v helm)" ]; then
-    source <(helm completion bash)
-fi

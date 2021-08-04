@@ -14,6 +14,8 @@ else
     return
 fi
 
+export BASH_ENV="$HOME/.local/etc/complete.sh"
+
 # 如果是非交互式则退出，比如 bash test.sh 这种调用 bash 运行脚本时就不是交互式
 # 只有直接敲 bash 进入的等待用户输入命令的那种模式才成为交互式，才往下初始化
 case "$-" in
@@ -34,6 +36,11 @@ fi
 # 判断 ~/.local/etc/config.sh 存在的话，就 source 它一下
 if [ -f "$HOME/.local/etc/config.sh" ]; then
     . "$HOME/.local/etc/config.sh"
+fi
+
+# 判断 ~/.local/etc/complete.sh 存在的话，就 source 它一下
+if [ -f "$HOME/.local/etc/complete.sh" ]; then
+    . "$HOME/.local/etc/complete.sh"
 fi
 
 # 判断 ~/.local/etc/local.sh 存在的话，就 source 它一下

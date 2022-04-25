@@ -5,8 +5,8 @@ rm build-go -rf
 mkdir build-go
 cd build-go
 
-wget https://golang.org/dl/go1.16.4.linux-amd64.tar.gz
-tar vzxf go1.16.4.linux-amd64.tar.gz
+wget https://go.dev/dl/go1.18.1.linux-amd64.tar.gz
+tar vzxf go1.18.1.linux-amd64.tar.gz
 
 cp -r ./go ~/.local
 ~/.local/go/bin/go --version
